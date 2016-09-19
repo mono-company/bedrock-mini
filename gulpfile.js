@@ -17,7 +17,6 @@ gulp.task('sass', function() {
             browsers: ['last 5 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('.'))
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./dist/'))
 });
