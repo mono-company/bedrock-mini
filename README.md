@@ -2,7 +2,7 @@
 
 ### A mini prototyping setup
 
-One step up from Codepen - work in your local environment using the handiness of Jade and SCSS with autoprefixing.
+One step up from <a href="http://codepen.io">Codepen</a> - work in your local environment using the handiness of Jade for templating, SCSS with autoprefixing and BrowserSync.
 
 * Renders Jade templates
 * Has Browsersync starting a local server
@@ -16,4 +16,4 @@ If you need more power, a styleguide, better navigation between templates, consi
 * Put your Jade files in `src`
 * Put your SCSS files in `scss`
 
-* Run `npm install` then `gulp` to start working
+Run `npm install` then `gulp` to start working
