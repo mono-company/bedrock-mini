@@ -7,7 +7,7 @@ One step up from <a href="http://codepen.io">Codepen</a> - work in your local en
 * Renders Jade templates
 * Has Browsersync starting a local server
 * Compiles SCSS
-* Already has references to jQuery in place, and a script tag to begin your JS
+* Already has references to jQuery and jQuery UI in place, and a script tag to begin your JS
 
 If you need more power, a styleguide, better navigation between templates, consider <a href="http://bedrock.mono.company/">Bedrock</a>.
 
