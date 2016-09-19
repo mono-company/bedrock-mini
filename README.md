@@ -1,6 +1,6 @@
 ## Bedrock Mini
 
-### A mini prototyping setup
+### A mini HTML prototyping setup
 
 One step up from <a href="http://codepen.io">Codepen</a> - work in your local environment using the handiness of Jade for templating, SCSS with autoprefixing and BrowserSync.
 
