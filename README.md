@@ -1,6 +1,6 @@
 ## Bedrock Mini
 
-### A mini HTML prototyping setup
+### A gulp workflow that does Jade, SCSS w/ autoprefixing, browsersync
 
 One step up from <a href="http://codepen.io">Codepen</a> - work in your local environment using the handiness of Jade for templating, SCSS with autoprefixing and BrowserSync.
 
@@ -9,11 +9,16 @@ One step up from <a href="http://codepen.io">Codepen</a> - work in your local en
 * Compiles SCSS
 * Already has references to jQuery and jQuery UI in place, and a script tag to begin your JS
 
+### Folder structure
+
+- js - your javascript
+- scss - your scss
+- src - your jade files
+- images - your images
+- dist - your generated website
+
 If you need more power, a styleguide, better navigation between templates, consider <a href="http://bedrock.mono.company/">Bedrock</a>.
 
 ### Instructions
 
-* Put your Jade files in `src`
-* Put your SCSS files in `scss`
-
-Run `npm install` then `gulp` to start working
+Run `npm install` then `gulp` to start working. Make sure browsersync is installed globally: `npm install -g browser-sync`.
