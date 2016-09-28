@@ -10,6 +10,11 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 
+gulp.task('images', function() {
+    gulp.src('images/**/*')
+    .pipe(gulp.dest('./dist/images/'))
+});
+
 gulp.task('sass', function() {
     gulp.src('scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -43,14 +48,14 @@ gulp.task('templates', function() {
 /**
  * Serve and watch the scss/jade files for changes
  */
-gulp.task('default', ['sass', 'templates'], function () {
+gulp.task('default', ['sass', 'images', 'templates'], function () {
 
     browserSync({
       server: './dist',
       notify: false
     });
 
+    gulp.watch('./images/**/*', ['images']);
     gulp.watch('./scss/*.scss', ['sass']);
     gulp.watch('./src/*.jade',  ['jade-watch']);
 });
-
