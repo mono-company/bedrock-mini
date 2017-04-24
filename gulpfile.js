@@ -40,6 +40,7 @@ gulp.task('sass', function() {
  * Important!!
  * Separate task for the reaction to `.jade` files
  */
+
 gulp.task('jade-watch', ['templates'], reload);
 
 gulp.task('templates', function() {
