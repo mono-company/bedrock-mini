@@ -15,6 +15,16 @@ gulp.task('images', function() {
     .pipe(gulp.dest('./dist/images/'))
 });
 
+gulp.task('fonts', function() {
+    gulp.src('fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts/'))
+});
+
+gulp.task('js', function() {
+    gulp.src('js/**/*')
+    .pipe(gulp.dest('./dist/js/'))
+});
+
 gulp.task('sass', function() {
     gulp.src('scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -23,7 +33,7 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./dist/css/'))
 });
 
 /**
@@ -35,7 +45,7 @@ gulp.task('jade-watch', ['templates'], reload);
 gulp.task('templates', function() {
   
   var YOUR_LOCALS = {};
- 
+
   gulp.src('./src/*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS
@@ -48,7 +58,8 @@ gulp.task('templates', function() {
 /**
  * Serve and watch the scss/jade files for changes
  */
-gulp.task('default', ['sass', 'images', 'templates'], function () {
+
+gulp.task('default', ['sass', 'images', 'js', 'fonts', 'templates'], function () {
 
     browserSync({
       server: './dist',
@@ -56,6 +67,15 @@ gulp.task('default', ['sass', 'images', 'templates'], function () {
     });
 
     gulp.watch('./images/**/*', ['images']);
+    gulp.watch('./fonts/**/*', ['fonts']);
     gulp.watch('./scss/*.scss', ['sass']);
+    gulp.watch('./js/*.js', ['js']);
     gulp.watch('./src/*.jade',  ['jade-watch']);
 });
+
+
+/**
+ * Build
+ */
+
+gulp.task('build', ['sass', 'images', 'js', 'fonts', 'templates']);
