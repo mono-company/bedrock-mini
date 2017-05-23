@@ -21,4 +21,8 @@ If you need more power, a styleguide, better navigation between templates, consi
 
 ### Instructions
 
-Run `npm install` then `gulp` to start working. Make sure browsersync is installed globally: `npm install -g browser-sync`.
+Run `npm install` then `gulp` to start working.
+
+Run `gulp build` to create a build.
+
+Make sure browsersync is installed globally: `npm install -g browser-sync`.
