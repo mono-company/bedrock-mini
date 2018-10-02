@@ -1,10 +1,10 @@
 ## Bedrock Mini
 
-### A gulp workflow that does Jade, SCSS w/ autoprefixing, browsersync
+### A gulp workflow that does Pug, SCSS w/ autoprefixing, browsersync
 
-One step up from <a href="http://codepen.io">Codepen</a> - work in your local environment using the handiness of Jade for templating, SCSS with autoprefixing and BrowserSync.
+One step up from <a href="http://codepen.io">Codepen</a> - work in your local environment using the handiness of Pug for templating, SCSS with autoprefixing and BrowserSync.
 
-* Renders Jade templates
+* Renders Gulp templates
 * Has Browsersync starting a local server
 * Compiles SCSS
 * Already has references to jQuery and jQuery UI in place, and a script tag to begin your JS
@@ -13,7 +13,7 @@ One step up from <a href="http://codepen.io">Codepen</a> - work in your local en
 
 - js - your javascript
 - scss - your scss
-- src - your jade files
+- src - your pug files
 - images - your images
 - dist - your generated website
 

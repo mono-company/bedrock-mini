@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
 
 var rename = require('gulp-rename');
@@ -8,7 +8,7 @@ var replace = require('gulp-replace-task');
 var sass = require('gulp-sass');
 
 var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
+var reload = browserSync.reload;
 
 gulp.task('images', function() {
     gulp.src('images/**/*')
@@ -38,17 +38,17 @@ gulp.task('sass', function() {
 
 /**
  * Important!!
- * Separate task for the reaction to `.jade` files
+ * Separate task for the reaction to `.pug` files
  */
 
-gulp.task('jade-watch', ['templates'], reload);
+gulp.task('pug', ['templates'], reload);
 
 gulp.task('templates', function() {
   
   var YOUR_LOCALS = {};
 
-  gulp.src('./src/*.jade')
-    .pipe(jade({
+  gulp.src('./src/*.pug')
+    .pipe(pug({
       locals: YOUR_LOCALS
     }))
     .pipe(browserSync.stream())
@@ -57,7 +57,7 @@ gulp.task('templates', function() {
 });
 
 /**
- * Serve and watch the scss/jade files for changes
+ * Serve and watch the scss/pug files for changes
  */
 
 gulp.task('default', ['sass', 'images', 'js', 'fonts', 'templates'], function () {
@@ -71,7 +71,7 @@ gulp.task('default', ['sass', 'images', 'js', 'fonts', 'templates'], function ()
     gulp.watch('./fonts/**/*', ['fonts']);
     gulp.watch('./scss/*.scss', ['sass']);
     gulp.watch('./js/*.js', ['js']);
-    gulp.watch('./src/*.jade',  ['jade-watch']);
+    gulp.watch('./src/*.pug',  ['pug']);
 });
 
 
